@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/icon.css">
+    <link rel="stylesheet" href="../../assets/css/slick.css">
+    <script src="../../assets/js/0.bundle.js"></script>
+    <script src="../../assets/js/2.bundle.js"></script>
+    <script src="../../assets/js/3.bundle.js"></script>
+    <script src="../../assets/js/4.bundle.js"></script>
+    <script src="../../assets/js/5.bundle.js"></script>
+    <script src="../../assets/js/6.bundle.js"></script>
+    <script src="../../assets/js/7.bundle.js"></script>
+    <script src="../../assets/js/main.bundle.js"></script>
+</head>
+<body>
+<header class=" mb-5 pb-3">
+    <div class="has_menu_close" id="has_menu_close"></div>
+    <div class="header-fixed   ">
+        <nav style="background-color: #696969 !important; height: 100px;" class="navbar navbar-expand-lg header-nav ">
+            <div class="navbar-header"><a id="mobile_btn" href=""><span
+                    class="bar-icon  text-primary"><span></span><span></span><span></span></span></a><a
+                    class="navbar-brand logo" href="/home"><img src="../../assets/img/logo/itcity%20(2).png"
+                                                                class="img-fluid ms-4 logotipSize" alt="Logo"></a></div>
+            <div class="main-menu-wrapper">
+                <div class="menu-header"><a class="menu-logo" href="/home"><img
+                        src="/9913222135055ee1a4b3085f999b783a.png" class="img-fluid" alt="Logo"></a><a id="menu_close"
+                                                                                                        class="menu-close"
+                                                                                                        href="#"><i
+                        class="fas fa-times"></i></a></div>
+                <ul class="main-nav">
+                    <li class=""><a id="menu_close" class=" text-white  " href="/home">Asosiy</a></li>
+                    <li class="pathname.includes(&quot;/about&quot;) ? &quot;active&quot; : &quot;&quot;   "><a
+                            id="menu_close" class="  text-white " href="/about">Biz haqimizda</a></li>
+                    <li class="active"><a id="menu_close" class=" text-white  " href="/home">Fikrlar</a></li>
+                    <li class="active"><a id="menu_close" class="default   text-white "
+                                          href="/blog/blog-grid">Blog</a></li>
+                    <li class="login-link"><a href="/login">Kirish </a></li>
+                    <li class="login-link"><a href="/register">Ro'yxatdan o'tish</a></li>
+                </ul>
+            </div>
+            <ul class="nav header-navbar-rht">
+                <li class="nav-item"><a class="nav-link   text-white " href="../user/login.html">Kirish</a></li>
+                <li class="nav-item"><a class="nav-link header-login "
+                                        href="../user/register.html"><span>Ro'yxatdan o'tish</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-8 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/home">Asosiy</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Qidiruv</li>
+                    </ol>
+                </nav>
+                <br>
+                <h2 class="breadcrumb-title">Qidiruv bo'yicha <span>18</span> ta o'qituvchi topildi </h2></div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 p-2">
+                <div style="position: sticky; top: 75px;">
+                    <div class="card search-filter"><h5 class="fw-bold text-center mt-2">Ustozlarni saralash</h5>
+                        <div class="card-header d-flex px-3 py-1">
+                            <div class="card-body p-0 mb-2 me-2"><select class="form-control" name="select">
+                                <option value="">Fan nomi</option>
+                                <option value="IELTS">IELTS</option>
+                                <option value="General English">General English</option>
+                                <option value="Koreys tili">Koreys tili</option>
+                                <option value="Rus tili">Rus tili</option>
+                                <option value="Nemis tili">Nemis tili</option>
+                                <option value="Arab tili">Arab tili</option>
+                                <option value="O'zbek tili">O'zbek tili</option>
+                                <option value="Ona tili va adabiyot">Ona tili va adabiyot</option>
+                                <option value="Xitoy tili">Xitoy tili</option>
+                                <option value="Yapon tili">Yapon tili</option>
+                                <option value="Turk tili">Turk tili</option>
+                                <option value="Abiturient - English">Abiturient - English</option>
+                            </select></div>
+                            <div class="filter-widget"><select class="select form-control">
+                                <option>Saralash</option>
+                                <option class="sorting">Reyting</option>
+                                <option class="sorting">Narx</option>
+                                <option class="sorting">Eng yangi</option>
+                                <option class="sorting">Fikrlarga ko'ra</option>
+                            </select></div>
+                        </div>
+                        <div class="MuiBox-root css-6z1op0"><p class="mt-1 mb-0 text-center">Narx bo'yicha saralash</p>
+                            <span class="MuiSlider-colorPrimary MuiSlider-sizeMedium MuiSlider-root css-exkjcx"><span
+                                    class="MuiSlider-rail css-b04pc9"></span><span style="left: 0%; width: 100%;"
+                                                                                   class="MuiSlider-track css-1t2bqnt"></span><span
+                                    data-index="0" data-focusvisible="false"
+                                    class="MuiSlider-thumbColorPrimary MuiSlider-thumbSizeMedium MuiSlider-thumb css-7drnjp"
+                                    style="left: 0%;"><input data-index="0" aria-valuenow="10000"
+                                                             aria-orientation="horizontal" aria-valuemax="1500000"
+                                                             aria-valuemin="10000" type="range" min="10000"
+                                                             max="1500000" step="5000"
+                                                             style="border: 0px none; clip: rect(0px, 0px, 0px, 0px); height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+                                                             value="10000"><span
+                                    class="MuiSlider-valueLabel css-19aln1f" aria-hidden="true"><span
+                                    class="MuiSlider-valueLabelCircle"><span
+                                    class="MuiSlider-valueLabelLabel">10000</span></span></span></span><span
+                                    data-index="1" data-focusvisible="false"
+                                    class="MuiSlider-thumbColorPrimary MuiSlider-thumbSizeMedium MuiSlider-thumb css-7drnjp"
+                                    style="left: 100%;"><input data-index="1" aria-valuenow="1500000"
+                                                               aria-orientation="horizontal" aria-valuemax="1500000"
+                                                               aria-valuemin="10000" type="range" min="10000"
+                                                               max="1500000" step="5000"
+                                                               style="border: 0px none; clip: rect(0px, 0px, 0px, 0px); height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+                                                               value="1500000"><span
+                                    class="MuiSlider-valueLabel css-19aln1f" aria-hidden="true"><span
+                                    class="MuiSlider-valueLabelCircle"><span
+                                    class="MuiSlider-valueLabelLabel">1500000</span></span></span></span></span>
+                            <div class=" card-header py-2 d-flex w-100 justify-content-between mb-2 ">
+                                <div class="text-primary text-center d-flex align-items-center flex-wrap"><h5
+                                        class="mb-0 w-100 text-center text-primary">10000</h5> <br>
+                                    <p class="text-dark mb-0 w-100 text-center">so'mdan</p></div>
+                                <div class="text-primary text-center d-flex align-items-center flex-wrap"><h5
+                                        class="mb-0 w-100 text-center text-primary">1500000</h5> <br>
+                                    <p class="text-dark mb-0 w-100 text-center">so'mgacha</p></div>
+                            </div>
+                        </div>
+                        <div class="MuiBox-root css-6z1op0">
+                            <div class="d-flex py-2 justify-content-between"><select class="form-control">
+                                <option value="1">Soatbay</option>
+                                <option value="8">Oyma-oy (haftada 2 marta)</option>
+                                <option value="12" selected="">Oyma-oy (haftada 3 marta)</option>
+                                <option value="16">Oyma-oy (haftada 4 marta)</option>
+                                <option value="20">Oyma-oy (haftada 5 marta)</option>
+                            </select></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 p-2 px-md-2" style="min-height: 400px;">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-xxl-6 col-12 p-0 p-md-2  card-mentors-lg">
+                        <div class="card rounded-3">
+                            <div class="card-body user_widged">
+                                <div class="user_info_box">
+                                    <div class="info_left"><a class="cursor_pointer" href="/mentor/booking/2972"><img
+                                            src="https://api.myteacher.uz/storage/profile/0mBtTbaa83xMrx1fuTlH48OVvFD2Q4b1vunKzUIs.png"
+                                            class="user_image" alt="User Image"></a></div>
+                                    <div class="info_right"><h2 class="user_name cursor_pointer">Dilruxsora
+                                        Jabborova </h2>
+                                        <div class="info_box">
+                                            <div class="info_box_left"><p class="text"><i
+                                                    class="fas fa-book text-black "></i>General English</p>
+                                                <p class="text"><i class="fas fa-wallet text-black"></i> 540000 UZS</p>
+                                            </div>
+                                            <div class="info_box_right"><p class="text"><i
+                                                    class="fas fa-comment text-black"></i> <span>0</span> ta fikr</p>
+                                                <p class="text"><i class="fas fa-user-graduate text-black"></i> 1ta
+                                                    o'quvchi</p>
+                                                <div class="text"><i class="fas fa-heart text-black"></i> 100% sodiqlik
+                                                    <div class="far fa-question-circle loyalty ps-1 text-black m-0">
+                                                        <div class="loyalty_message">Sodiqlik darajasi ko’rsatkichi -
+                                                            o’qituvchining o’z o’quvchilarini qanchalik olib qolishi,
+                                                            ya’ni umumiy kurs muddatini oxirigacha yetkazib hamma
+                                                            darslarni to’liq o’tishi indeksi hisoblanadi.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user_description"><p class="text  ">Maqsadim óquvchi óz bilimlarimni
+                                    ulashish va óquvchining maqsadlariga tezroq erishishiga kómaklashish,óquvchining
+                                    bilim darajasiga qarab kitoblar tanlab ,ingliz tili bilimlarini oshirish.
+                                    Darsni sifatli ótish va óquvchining olayotgan bilimlaridan mamnunligi mening eng
+                                    oliy maqsadim</p>
+                                    <div class="d-none">Fikirlar mavjud emas</div>
+                                    <div class="info_show"><p>Batafsil</p></div>
+                                </div>
+                                <div class="mentor-booking w-100 d-flex justify-content-end"><a
+                                        class="btn btn-primary p-1 cursor_pointer" href="/mentor/booking/2972">Band
+                                    qilish</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-about">
+                        <div class="footer-logo"><img src="/9913222135055ee1a4b3085f999b783a.png" alt="logo">
+                        </div>
+                        <div class="footer-about-content">
+                            <div class="social-icon">
+                                <ul>
+                                    <li><a href="https://t.me/MyTeacheruzb" target="_blank"><i
+                                            class="fab fa-telegram-plane"></i></a></li>
+                                    <li><a href="https://www.instagram.com/myteacher.uz/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/uzmyteacher/" target="_blank"><i
+                                            aria-hidden="true" class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-menu"><h2 class="footer-title">Menyu</h2>
+                        <ul>
+                            <li><a href="../index.html">Asosiy</a></li>
+                            <li><a href="../biz%20haqimiz.html">Biz haqimizda</a></li>
+                            <li><a href="../blog.html">Blog</a></li>
+                            <li><a href="../index.html">Fikrlar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-menu"><h2 class="footer-title">Eng so'nggi yangiliklar</h2>
+                        <ul>
+                            <li><a href="/">Bizga investitsiya kiriting…...</a></li>
+                            <li>
+                                <a href="https://daryo.uz/2021/02/12/audio-kursmi-yoki-onlayn-dars-qay-biri-samaraliroq/">Daryo.uz
+                                    maqolasi: Audio kursm...</a></li>
+                            <li><a href="https://xabar.uz/tahlil/ikki-yosh-filolog-yaxshi-daromad">Xabar.uz
+                                maqolasi: Ikki yosh f...</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-contact"><h2 class="footer-title">Aloqa</h2>
+                        <div class="footer-contact-info">
+                            <div class="footer-address"><span><i class="fas fa-map-marker-alt"></i></span>
+                                <p>Toshkent shahri, Yunusobod tumani, <br>9-mavze 8-uy 27-xonadon</p></div>
+                            <p><a href="tel:+998973003011" class="text-black"><i class="fas fa-phone-alt"></i>+998973003011</a>
+                            </p>
+                            <p class="mb-0"><a href="mailto:info@myteacher.uz" class="text-black"><i
+                                    class="fas fa-envelope"></i>info@myteacher.uz</a></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container-fluid">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="copyright-text"><p class="mb-0">© 2022 MyTeacher</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div style="margin-top: 100px"></div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
+

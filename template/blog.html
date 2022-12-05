@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/lochin.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <script src="{% static 'js/0.bundle.js' %}"></script>
+    <script src="{% static 'js/2.bundle.js' %}"></script>
+    <script src="{% static 'js/3.bundle.js' %}"></script>
+    <script src="{% static 'js/4.bundle.js' %}"></script>
+    <script src="{% static 'js/5.bundle.js' %}"></script>
+    <script src="{% static 'js/6.bundle.js' %}"></script>
+    <script src="{% static 'js/7.bundle.js' %}"></script>
+    <script src="{% static 'js/main.bundle.js' %}"></script>
+</head>
+<body>
+<header class=" mb-5 pb-3">
+    <div class="has_menu_close" id="has_menu_close"></div>
+    <div class="header-fixed   ">
+        <nav style="background-color: #696969 !important; height: 100px;" class="navbar navbar-expand-lg header-nav ">
+            <div class="navbar-header"><a id="mobile_btn" href=""><span
+                    class="bar-icon  text-primary"><span></span><span></span><span></span></span></a><a
+                    class="navbar-brand logo" href="/home"><img src="{% static 'img/logo/itcity%20(2).png' %}"
+                                                                class="img-fluid ms-5 logotipSize" alt="Logo"></a></div>
+            <div class="main-menu-wrapper">
+                <div class="menu-header"><a class="menu-logo" href="/home"><img
+                        src="/9913222135055ee1a4b3085f999b783a.png" class="img-fluid" alt="Logo"></a><a id="menu_close"
+                                                                                                        class="menu-close"
+                                                                                                        href="#"><i
+                        class="fas fa-times"></i></a></div>
+                <ul class="main-nav">
+                    <li class=""><a id="menu_close" class=" text-white   text   " href="{% url 'index' %}">Asosiy</a></li>
+                    <li class="pathname.includes(&quot;/about&quot;) ? &quot;active&quot; : &quot;&quot;   "><a
+                            id="menu_close" class="  text-white text" href="biz%20haqimiz.html">Biz haqimizda</a></li>
+                    <li class="active"><a id="menu_close" class=" text-white  text " href="index.html">Fikrlar</a></li>
+                    <li class="active"><a id="menu_close" class="default   text-white  text "
+                                          href="blog.html">Blog</a></li>
+                    <li class="login-link"><a href="/login">Kirish </a></li>
+                    <li class="login-link"><a href="/register">Ro'yxatdan o'tish</a></li>
+                </ul>
+            </div>
+            <ul class="nav header-navbar-rht">
+                <li class="nav-item"><a class="nav-link text    text-white " href="user/login.html">Kirish</a></li>
+                <li class="nav-item"><a class="nav-link header-login "
+                                        href="user/register.html"><span>Ro'yxatdan o'tish</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/home">Asaosiy</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                    </ol>
+                </nav>
+                <br>
+                <h2 class="breadcrumb-title">O'qituvchilarimiz tomonidan qo'yilgan bloglar</h2></div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container mt-5"> -->
+<div class="row ml-5" style="margin-left: 10rem!important;">
+    <div class="col-8">
+        <p style="margin-left: 90px; margin-top: 150px; font-size: 40px; color: #4169E1;" class="text">Bloglar
+            topilmadi!</p>
+
+    </div>
+
+    <div class="col-4">
+        <div class="card search-widget">
+            <div class="card-body">
+                <form class="search-form">
+                    <div class="input-group"><input type="text" placeholder="Qidirish..." class="form-control" value="">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="card post-widget">
+            <div class="card-header"><h4 class="card-title">Oxirgi postlar</h4></div>
+            <div class="card-body">
+                <ul class="latest-posts">Postlar mavjud emas!</ul>
+            </div>
+        </div>
+        <br>
+        <div class="card category-widget">
+            <div class="card-header"><h4 class="card-title">Blog kategoriyalari</h4></div>
+            <div class="card-body">
+                <ul class="categories">
+                    <li><a href="#">Tillar <span>(0)</span></a></li>
+                    <li><a href="#">Aniq fanlar <span>(0)</span></a></li>
+                    <li><a href="#">Tabiiy fanlar <span>(0)</span></a></li>
+                    <li><a href="#">IT texnologiya <span>(0)</span></a></li>
+                    <li><a href="#">Gumanitar fanlar <span>(0)</span></a></li>
+                    <li><a href="#">IELTS <span>(0)</span></a></li>
+                    <li><a href="#">Bolalar Uchun <span>(0)</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+        <div class="card tags-widget">
+            <div class="card-header"><h4 class="card-title">Teglar</h4></div>
+            <div class="card-body">
+                <ul class="tags">
+                    <li><span style="cursor: pointer;" class="tag active">Hammasi</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">IELTS</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">General English</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Koreys tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Matematika</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Rus tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Nemis tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Arab tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">O'zbek tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Ona tili va adabiyot</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Biologiya</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Kimyo</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Tarix</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Xitoy tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Dasturlash</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Web-dizayn</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Targeting kursi</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">SMM dizayn</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Fizika</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Yapon tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Moliyaviy Savodxonlik</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Gitara chalish kursi</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Grafik Dizayn</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Turk tili</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Mental arifmetika</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Abiturient - English</span></li>
+                    <li><span style="cursor: pointer;" class="tag ">Mnemonika</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- </div> -->
+<hr style="width:1150px;">
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-about">
+                        <div class="footer-logo"><img src="{% static 'img/logo/itcity%20(2).png' %}" alt="logo">
+                        </div>
+                        <div class="footer-about-content">
+                            <div class="social-icon">
+                                <ul>
+                                    <li><a href="https://t.me/MyTeacheruzb" target="_blank"><i
+                                            class="fab fa-telegram-plane"></i></a></li>
+                                    <li><a href="https://www.instagram.com/myteacher.uz/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/uzmyteacher/" target="_blank"><i
+                                            aria-hidden="true" class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-menu"><h2 class="footer-title">Menyu</h2>
+                        <ul>
+                            <li><a href="/home">Asosiy</a></li>
+                            <li><a href="/about/">Biz haqimizda</a></li>
+                            <li><a href="/blog/blog-grid/">Blog</a></li>
+                            <li><a href="/home">Fikrlar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-menu"><h2 class="footer-title">Eng so'nggi yangiliklar</h2>
+                        <ul>
+                            <li><a href="/">Bizga investitsiya kiriting…...</a></li>
+                            <li>
+                                <a href="https://daryo.uz/2021/02/12/audio-kursmi-yoki-onlayn-dars-qay-biri-samaraliroq/">Daryo.uz
+                                    maqolasi: Audio kursm...</a></li>
+                            <li><a href="https://xabar.uz/tahlil/ikki-yosh-filolog-yaxshi-daromad">Xabar.uz
+                                maqolasi: Ikki yosh f...</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-contact"><h2 class="footer-title">Aloqa</h2>
+                        <div class="footer-contact-info">
+                            <div class="footer-address"><span><i class="fas fa-map-marker-alt"></i></span>
+                                <p>Toshkent shahri, Yunusobod tumani, <br>9-mavze 8-uy 27-xonadon</p></div>
+                            <p><a href="tel:+998973003011" class="text-black"><i class="fas fa-phone-alt"></i>+998973003011</a>
+                            </p>
+                            <p class="mb-0"><a href="mailto:info@myteacher.uz" class="text-black"><i
+                                    class="fas fa-envelope"></i>info@myteacher.uz</a></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container-fluid">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="copyright-text"><p class="mb-0">© 2022 MyTeacher</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div style="margin-top: 100px"></div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
+

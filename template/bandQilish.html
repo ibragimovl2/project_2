@@ -1,0 +1,627 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <script src="../assets/js/0.bundle.js"></script>
+    <script src="{% static 'js/2.bundle.js' %}"></script>
+    <script src="{% static 'js/3.bundle.js' %}"></script>
+    <script src="{% static 'js/4.bundle.js' %}"></script>
+    <script src="{% static 'js/5.bundle.js' %}"></script>
+    <script src="{% static 'js/6.bundle.js' %}"></script>
+    <script src="{% static 'js/7.bundle.js' %}"></script>
+    <script src="{% static 'js/main.bundle.js' %}"></script>
+
+</head>
+<body>
+<div id="app">
+    <div class="Toastify" style=""></div>
+    <div class="main-wrapper" style="">
+         <header class=" mb-0 pb-0">
+            <div class="has_menu_close" id="has_menu_close"></div>
+            <div class="header-fixed   ">
+                <nav style="background-color: #696969 !important; height: 100px;"
+                     class="navbar navbar-expand-lg header-nav   bg-transparent ">
+                    <div class="navbar-header"><a id="mobile_btn" href=""><span
+                            class="bar-icon  text-primary"><span></span><span></span><span></span></span></a><a
+                            class="navbar-brand logo" href="index.html"><img
+                            src="{% static 'img/logo/itcity (2).png' %}"
+                            class="img-fluid ms-4 logotipSize"
+                            alt="Logo"></a></div>
+                    <div class="main-menu-wrapper">
+                        <div class="menu-header"><a class="menu-logo" href="/home"><img
+                                src="{% static 'img/logo/itcity (2).png' %}" class="img-fluid" alt="Logo"></a><a
+                                id="menu_close" class="menu-close" href="#"><i class="fas fa-times"></i></a></div>
+                        <ul class="main-nav ">
+                            <li class="active"><a id="menu_close" class=" text-white " href="{% url 'index' %}">Asosiy</a>
+                            </li>
+                            <li class="pathname.includes(&quot;/about&quot;) ? &quot;active&quot; : &quot;&quot;   "><a
+                                    id="menu_close" class="  text-white    " href="biz%20haqimiz.html">Biz haqimizda</a>
+                            </li>
+                            <li class=""><a id="menu_close" class=" text-white " href="#">Shikoyat</a>
+                            </li>
+                            <li class=""><a id="menu_close" class="default   text-white"
+                                            href="{% url 'blog' %}">Blog</a></li>
+                            <li class="login-link"><a href="/login">Kirish </a></li>
+                            <li class="login-link"><a href="/register">Ro'yxatdan o'tish</a></li>
+                        </ul>
+                    </div>
+                    <ul class="nav header-navbar-rht">
+                        <li class="nav-item"><a class="nav-link  text-white   text-white "
+                                                href="user/login.html">Kirish</a></li>
+                        <li class="nav-item"><a class="nav-link header-login "
+                                                href="user/register.html"><span>Ro'yxatdan o'tish</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div>
+            <div class="breadcrumb-bar">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 col-12">
+                            <nav aria-label="breadcrumb" class="page-breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Asosiy</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">O'qituvchi kabineti</li>
+                                </ol>
+                            </nav>
+                            <h2 class="breadcrumb-title">O'qituvchi kabineti</h2></div>
+                    </div>
+                </div>
+            </div>
+            {% for i in user %}
+            <div class="content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="card col-12  mr-auto ml-auto p-0">
+                                <div class="card-body">
+                                    <div class="mentor-widget justify-content-center flex-wrap row justify-content-sm-between">
+                                        <div class="col-12 col-sm-6 col-md-8">
+                                            <div class="d-flex justify-content-center flex-wrap align-items-center justify-content-md-start w-100">
+                                                <div class="mentor-img d-flex flex-wrap justify-content-center"><img
+                                                        class="avatar pro-avatar"
+                                                        src="{{ i.image.url }}"
+                                                        alt="avatar">
+                                                    <div class="rating text-center">
+                                                        <div class="star-ratings" title="5 Stars"
+                                                             style="position: relative; box-sizing: border-box; display: inline-block;">
+                                                            <svg class="star-grad"
+                                                                 style="position: absolute; z-index: 0; width: 0px; height: 0px; visibility: hidden;">
+                                                                <defs>
+                                                                    <linearGradient id="starGrad084686816044675" x1="0%"
+                                                                                    y1="0%" x2="100%" y2="0%">
+                                                                        <stop offset="0%" class="stop-color-first"
+                                                                              style="stop-color: yellow; stop-opacity: 1;"></stop>
+                                                                        <stop offset="0%" class="stop-color-first"
+                                                                              style="stop-color: yellow; stop-opacity: 1;"></stop>
+                                                                        <stop offset="0%" class="stop-color-final"
+                                                                              style="stop-color: rgb(203, 211, 227); stop-opacity: 1;"></stop>
+                                                                        <stop offset="100%" class="stop-color-final"
+                                                                              style="stop-color: rgb(203, 211, 227); stop-opacity: 1;"></stop>
+                                                                    </linearGradient>
+                                                                </defs>
+                                                            </svg>
+                                                            <div class="star-container"
+                                                                 style="position: relative; display: inline-block; vertical-align: middle; padding-right: 2px;">
+                                                                <svg viewBox="0 0 51 48" class="widget-svg"
+                                                                     style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                    <path class="star"
+                                                                          style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="star-container"
+                                                                 style="position: relative; display: inline-block; vertical-align: middle; padding-left: 2px; padding-right: 2px;">
+                                                                <svg viewBox="0 0 51 48" class="widget-svg"
+                                                                     style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                    <path class="star"
+                                                                          style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="star-container"
+                                                                 style="position: relative; display: inline-block; vertical-align: middle; padding-left: 2px; padding-right: 2px;">
+                                                                <svg viewBox="0 0 51 48" class="widget-svg"
+                                                                     style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                    <path class="star"
+                                                                          style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="star-container"
+                                                                 style="position: relative; display: inline-block; vertical-align: middle; padding-left: 2px; padding-right: 2px;">
+                                                                <svg viewBox="0 0 51 48" class="widget-svg"
+                                                                     style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                    <path class="star"
+                                                                          style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="star-container"
+                                                                 style="position: relative; display: inline-block; vertical-align: middle; padding-left: 2px;">
+                                                                <svg viewBox="0 0 51 48" class="widget-svg"
+                                                                     style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                    <path class="star"
+                                                                          style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mentor-details m-0"><p class="user-location m-0"><i
+                                                            class="fas fa-map-marker-alt me-2"></i>Tashkent, Uzbekistan
+                                                    </p></div>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center  justify-content-md-start  align-items-center align-items-md-start">
+                                                    <h4 class="mb-0">{{ i.first_name }}  {{ i.last_name }}</h4>
+                                                    <p class="mentor-type mb-0">{{ i.course_name }}</p>
+                                                    <div class="d-flex flex-wrap w-100 w-sm-75 justify-content-center justify-content-md-start">
+                                                        <p class="mentor-type w-100 text-center text-md-left ">
+                                                            {{ i.email }}</p><a
+                                                            href="#infonmation-mentor" class="btn-blue me-2"><i
+                                                            class="fas fa-book-reader"></i></a><a href="#location"
+                                                                                                  class="btn-blue me-2"><i
+                                                            class="fas fa-map-marker-alt"></i></a><a href="#sectionTime"
+                                                                                                     class="btn-blue"><i
+                                                            class="fas fa-calendar-alt"></i></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <div class="d-flex align-items-center flex-wrap h-100 justify-content-center">
+                                                <div class="hireme-btn text-center"><span
+                                                        class="hire-rate text-center pb-0">{{ i.price }}so'm/ soat</span><span
+                                                        class="text-center mentor-type">Sinov darsi 40000 so'm</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body custom-border-card pb-0"><h4 class="widget-title">O'qituvchining
+                                    bo'sh vaqtini tanlash</h4>
+                                    <p>Quyidagi jadvaldan o'qituvchining bo'sh vaqtiga qarab sinov darsi uchun vaqt
+                                        tanlashingiz mumkin</p>
+                                    <div class="row">
+                                        <div class="col-12 p-0 p-md-3">
+                                            <div class="calendarMentor">
+                                                <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events mySwiper">
+                                                    <div class="swiper-button-prev swiper-button-disabled"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-wrapper"
+                                                         style="transform: translate3d(0px, 0px, 0px);">
+                                                        <div class="swiper-slide swiper-slide-active"
+                                                             style="width: 876px;">
+                                                            <div class="booking-schedule schedule-widget">
+                                                                <div class="schedule-header">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 ">
+                                                                            <div class="day-slot">
+                                                                                <ul>
+                                                                                    <li><span>DUSH</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-11-28</small></span>
+                                                                                    </li>
+                                                                                    <li><span>SESH</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-11-29</small></span>
+                                                                                    </li>
+                                                                                    <li><span>CHO</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-11-30</small></span>
+                                                                                    </li>
+                                                                                    <li><span>PAY</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-12-01</small></span>
+                                                                                    </li>
+                                                                                    <li><span>JUM</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-12-02</small></span>
+                                                                                    </li>
+                                                                                    <li><span>SHA</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-12-03</small></span>
+                                                                                    </li>
+                                                                                    <li><span>YAK</span><span
+                                                                                            class="slot-date"><small
+                                                                                            class="slot-year">2022-12-04</small></span>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="schedule-cont">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="time-slot">
+                                                                                <ul class="clearfix">
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="timing"
+                                                                                             style="cursor: pointer;">
+                                                                                            <span>Band</span></div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="submit-section mt-3 proceed-btn text-right">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 d-flex  order-1 order-md-0 justify-content-center justify-content-md-start align-items-center">
+                                                <img class="payIcon me-3"
+                                                     src="data:image/png;base64,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"
+                                                     alt="click"><img class="payIcon"
+                                                                      src="/f050a6f86f9d55d4e2562bf6ed09df74.png"
+                                                                      alt="payme"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body custom-border-card pb-0">
+                                    <div class="widget about-widget custom-about mb-0"><h4 class="widget-title">
+                                        O'qituvchi haqida</h4>
+                                        <p class="mb-0 py-3 w-100">{{ i.about_from }}</p></div>
+                                </div>
+                            </div>
+                            <div class="card" id="infonmation-mentor">
+                                <div class="card-body custom-border-card pb-0">
+                                    <div class="widget experience-widget mb-0"><h4 class="widget-title">Ma'lumoti va
+                                        malakasi</h4>
+                                        <hr>
+                                        <div class="experience-box">
+                                            <ul class="experience-list profile-custom-list">
+                                                <li>
+                                                    <div class="experience-content">
+                                                        <div class="timeline-content">
+                                                            <span>Qayerni tugatgan (o'qiyapti)</span>
+                                                            <div class="row-result">{{ i.university }}</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="experience-content">
+                                                        <div class="timeline-content"><span>Mutaxassisligi</span>
+                                                            <div class="row-result">{{ i.course_name }}</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="experience-content">
+                                                        <div class="timeline-content"><span>Sertifikatlari</span>
+                                                            <div class="row-result">{{ i.serficate_file }}</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="experience-content">
+                                                        <div class="timeline-content">
+                                                            <span>Qaysi tilda dars o'tadi</span>
+                                                            <div class="row-result">{{ i.language }}</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="experience-content">
+                                                        <div class="timeline-content"><span>Pedagogik tajribasi</span>
+                                                            <div class="row-result"><span>{{ i.prietice }}</span></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="experience-content">
+                                                        <div class="timeline-content"><span>Tug'ilgan sanasi</span>
+                                                            <div class="row-result">{{ i.birth_day }}</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+{#                            <div class="card" id="location">#}
+{#                                <div class="card-body pb-1 custom-border-card">#}
+{#                                    <div class="widget awards-widget m-0"><h4 class="widget-title">Manzil</h4>#}
+{#                                        <hr>#}
+{#                                        <div class="experience-box">#}
+{#                                            <ul class="experience-list profile-custom-list">#}
+{#                                                <li>#}
+{#                                                    <div class="experience-content">#}
+{#                                                        <div class="timeline-content">#}
+{#                                                            <span>Hozir qayerda yashaydi</span>#}
+{#                                                            <div class="row-result">Tashkent, Uzbekistan</div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </li>#}
+{#                                                <li>#}
+{#                                                    <div class="experience-content">#}
+{#                                                        <div class="timeline-content">#}
+{#                                                            <span>Doimiy yashash manzili</span>#}
+{#                                                            <div class="row-result">Kiritilmagan</div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+
+                            <div class="card">
+                                <div class="card-body custom-border-card">
+                                    <div class="widget awards-widget m-0"><h4 class="widget-title">Commentlar</h4>
+                                        <hr>
+                                        <div class="content">
+                                            <div class="container p-0 p-sm-2">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="doc-review review-listing">
+                                                            <ul class="comments-list">
+                                                                <li>
+                                                                    <div class="comment"><img
+                                                                            class="avatar rounded-circle"
+                                                                            alt="User Image"
+                                                                            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMQEg8NEBAPDw0NEA4ODg4PDQ8PDhAOFREWFhURFhMYHCggGB0lJxMTIT0hJSkrLjAvFyMzODUsOygtLjcBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAQgCAwcGBQT/xABFEAACAgECAgYGBgcDDQAAAAAAAQIDBAUREiEGBxMxQXEVUVSBlNIIIjJhkaEUQlJygrHBI2KSJDM1Q0VTY3SEsrPDxP/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDtIAAAAAAAAAAAEqIEAzUDJRQGoG3YkDSDcRsBqBtcUYuAGAJcSAAAAAAAAAAAAkAAQAAAAAAAASo7mUYeszAhRJAAAkAQE9+7mc+6wOtTH0zhqp7LMy+LayiNso9nDbvlNRaT7vq9/M4JrvS+y3KtzcNWab27U7KsfJs4ZW/rWPbh7/VsBbwFT8LrQ1WpbLNskl4WRhP82tz72n9eWpVyTtji3w/WjKl1ya+6UWtn7mBZIHg+g3Wnh6nKND3xcyW3DTa042PxVc+5+T2Z70CCHEkAa3AxNxjKIGsBoAAAAAAEgACAAAAABI2xjsIx2JAAEgAAAOYdenTGeDjV4mPNwyc3iUrIycZ146X1nFrmm20t/M6eypHWfr7z9Syr926q59hQn3Rqr+ry83xS/iA8q3vzfNvvZAAAAAZVzcWpRbjKLUoyi2pRknummu5lreqbpPLUtPqtte+TQ3j3y8ZSj9mfvTT89yqB63q56a26TkxsUpSxLXGOVT3qUN/txXhJev3AW1BjXYpJTi04ySlFrucWt0zICASQBElua2jaQ1uBqAaAAAASAAIAAAzhHxMYrc2gACQAAAAAD43TTOePgZ+RH7dWLkSh+/2b4fz2KbFv+sapz0vU4rv/AEPIl7owcn/IqAAAAAAAAABbfqsy3dpWnze+6pVbb73wNx3/ACPVnnur7AePpuBRJcM4Y9bmv70lxP8AmehAAACASQBjOJrNxrmgMQABIAAgAmKA2QRIAEgAAAAAAA8h1o9KoabhTsnX20srixq6t9otyhLdyfq2TKmFmOv3R5ZGm9tBOUsK6N8kv924uMn5LiT9xWcAAAAAAG3EtUJ1zlBWQhOEpVybUZxTTcG14Pu95qAFxOhHSSGp4dWdCDqU+OEq20+CcJcLW68OW/kz7x4zqg0mWJpWJXYuGyzjyJRa2a7STlFNevbhPZgAAAAAEENEgDSDKaMQJAAEGdaMDZDuAyJRBIAAAAAAAAGF9MZxlXOKnXZGUJwkt4yi1s014orT1ydAa9LspyMXj/RMpzi4yfEqrVzUE/U1u+fqZZk+L0x6OV6li24VvLjXFXPbnXct+Ga8t/wbApuD6Ov6Ldg32YeRDguqez8YyXhOL8U/WfOAAAAdh6l+rinNrepZsZTqjbw49L5V2cD+tKX7S35bd3JnPOhnRe7U8mvFpi+HeLvt/Vqp3SlNv+S8WW40bTK8SinEojwU0QUIR+5d7b8W+b3+8D9iQAAAAAAABBJAGNiNZtZqAkAAQbUajcgBJBIAAAAAAAAAA/HbqtELK8eV9Mci7dVUu2Ctnst3ww33YFePpD/6Uh/ydH/ktOYHW/pFaXas2nM7OX6NZjV0q1LeCtjObcG/B7ST+/3HJAAAA7j9Gb/av/Qf/QdxOOfRx0m6qnOyrIOFOW8VUSlyc1V2vFJL1f2kefmdQ03pDi5Mp10ZVFtlcnGyuFsXZCSbT3hvuuafgB9MAAAAAAAAgkgAaWbjVIAAAINxpNyAEkEgAAAB8jpR0kx9NoeVlT4K0+GMUnKdk33QjFd7OC9LeurMyXKvDUcLHfJSS4smS9bm+UfJL3gWA1nXsbCj2mVkVUR712k0pPyj3s5h0g6+MaveGFj25El3W3f2NT8lzk/ekcCysmdspW2znZZN7yssk5zk+7dyfNmoD23SHrT1PM4ovJePTLddjjRVSS++f23+JPVDbKWsYUpScpSnY3KTbk32cubb7zxB6Lq8zuw1LT7t0ksmuDb7tpvgf/cBbPWdKpzKbMXIrVtFy4Zwf5NPvTXfuirXWR0Et0i/Z72Yd0pPGvSf2e/s5+qa/PbctkfI6W42LZiZEM/hWH2cnbKXLgSXKcX3qS8Nue4FNDpfVH1bvUprNyYtadVJrhfFGWRNfqxf7K8X92x5Xo7i4E9QhVlXWR0t3Tj2zXDOVe74OPb7KfLd+H3FvMSmEIQhUoxqhGKrjBJQUNuW23gBNNMa4xrhFQhCKjGMVtGMUtkkimet2uOXlTjJxksnIcZRbjJPtJc013FydQyFVVbbJqMKq7LJSfdGMYtt/kUoyLXOU7JfanKU35t7v+YHsdA609Tw+GKyXfVHl2WTFWpr99/XX4nTuj/XvjWcMc3Hsx5Pk7av7apP1uPKSXluV8AF0NE1/GzY9pi5FV8dt2oTTlHzj3r3n0ikWLkzqlG2qc67IPeM65OE4v7pLmjpfRPrqzcZxrzEs3H7m2lDIj6tprk/Jr3gWSB8fot0kx9SojlYs+KDfDOMltZXNd8JLwZ9gAQSQANUjaaWBIAAg2w7jUZ1sDMkgkAAfm1PMVFN2RL7NFc7X5Ri3/QCt/Xt0jeVqEsWMn2GBFVKO/1Xc+c5+fNL+E5sbsvJlbZZdN72WznZN+ucpNt/mzSAAAAyhNxakm1KLTTT2aa7mmYgC6XR7U1l42Nlx22yKa7OXNJuPNfjueb61uiUtTw5V13Sqtx+K6EeJqm1qO/BYl5cn4M819HjXe2w7sCck54dnFWue/YWc/ylx/ij3fT7MdGm6jcnwyjiZChL1TlBxi/xaAqPo+nTyr6cSvhVmRZGuDk9opt97Zb7olofo/Fpwu1sv7GOzssk2233pJ/Zj6l4IqFouc8fIx8ld9F1Vq37vqTUv6F1QPG9buqrG0rNe+0sit4sfvdv1X+TkVPOy/SN13juxdOhL6uPGWRdFd3aT2UN/JKX+M40AAAAAAdH6jOkjxNQjjSltRqG1Di5NR7f/VS29e7cf4izZSXT8p021Xx5Tpsrti/70JKS/kXR03LV1VN8fs3VwsXlKKf9QP0kEkAGaTZN8jWBIAAgmLIAG4ERZIEnieuTUOw0jMfLe5Qx0n/xJJP8t37j2xyL6SGXthYdG/8AncrtH96hVJf+xfgBXoAAAAAAAHqurPpL6Nz6MiT2om+xyV4djPk2/wB17S9x3Xryz1DSLeGS/wAonRXFrunFyUn+SKwHrta6bzy9Mw9KtjJzwruKNzlupUqtxhBrv3XE15JAeRLgaVr1cNLo1K2SjVDDqum9/VWuXm3y95T89lrXTud+l4WjQU4Rx9/0iTa4bVGTdUUvUuT5+KXqA890i1aeblZGbZ9vJtnZt+zFv6sPJLZe4+cAAAAAAAC1fUxqLyNIw23vOhWY8tltsq7GoL/DwFVCwf0cM7ixMvHb505EZxXqjOC/rFgdeYAbA12MxAAkAAQAAMoM2Gk2QkBkcQ+kTi33W4NdNN1tcK7py7Omc0puUVzaX3HbwBTD0Bl+x5Xwt3yj0Bl+x5Xw13yl0ABS/wBAZfseV8Nd8o9AZfseV8Nd8pdAAUv9AZfseV8Nd8o9AZfseV8Ld8pdAAUv9AZfseV8Nd8o9AZfseV8Nd8pdAAUv9AZfseV8Nd8o9AZfseV8Nd8pdAAUv8AQGX7JlfDXfKPQGX7HlfDXfKXQAFL/QGX7HlfDXfKPQGX7HlfDXfKXQAFL/QGX7HlfDXfKPQGX7HlfC3fKXQAFL/QGX7JlfDXfKdf+jtiX0XZ8Lqb6oWVUyi7abIRcozktk2u/wCsdx3IAGFj8DKT2NQAAASAAIAAAJgAbYvck1JmxPcCSSABIAAAAAAAAAAAAAAAAIAANhs1Se4BvcgAAAAJAAEAAAAAATAA2RkZGkyjMDYCEyQJBAAkEACQQAJBAAABsARKWxi5mAEt7kAAAAAAAEgACAAAAAAAAAAAMlMxAGxTJTNQA3A0k7gbQatyNwN25i5msAZOZiAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//2Q==">
+                                                                        <div class="comment-body w-100">
+                                                                            <div class="meta-data d-flex justify-content-between">
+                                                                                <div><span class="comment-author">Sardor Dadayev</span><span
+                                                                                        class="comment-date">26-9-2022</span>
+                                                                                </div>
+                                                                                <div class="review-count rating">
+                                                                                    <div class="star-ratings"
+                                                                                         title="5 Stars"
+                                                                                         style="position: relative; box-sizing: border-box; display: inline-block;">
+                                                                                        <svg class="star-grad"
+                                                                                             style="position: absolute; z-index: 0; width: 0px; height: 0px; visibility: hidden;">
+                                                                                            <defs>
+                                                                                                <linearGradient
+                                                                                                        id="starGrad348827249461799"
+                                                                                                        x1="0%" y1="0%"
+                                                                                                        x2="100%"
+                                                                                                        y2="0%">
+                                                                                                    <stop offset="0%"
+                                                                                                          class="stop-color-first"
+                                                                                                          style="stop-color: yellow; stop-opacity: 1;"></stop>
+                                                                                                    <stop offset="0%"
+                                                                                                          class="stop-color-first"
+                                                                                                          style="stop-color: yellow; stop-opacity: 1;"></stop>
+                                                                                                    <stop offset="0%"
+                                                                                                          class="stop-color-final"
+                                                                                                          style="stop-color: rgb(203, 211, 227); stop-opacity: 1;"></stop>
+                                                                                                    <stop offset="100%"
+                                                                                                          class="stop-color-final"
+                                                                                                          style="stop-color: rgb(203, 211, 227); stop-opacity: 1;"></stop>
+                                                                                                </linearGradient>
+                                                                                            </defs>
+                                                                                        </svg>
+                                                                                        <div class="star-container"
+                                                                                             style="position: relative; display: inline-block; vertical-align: middle; padding-right: 0px;">
+                                                                                            <svg viewBox="0 0 51 48"
+                                                                                                 class="widget-svg"
+                                                                                                 style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                                                <path class="star"
+                                                                                                      style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                                                      d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <div class="star-container"
+                                                                                             style="position: relative; display: inline-block; vertical-align: middle; padding-left: 0px; padding-right: 0px;">
+                                                                                            <svg viewBox="0 0 51 48"
+                                                                                                 class="widget-svg"
+                                                                                                 style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                                                <path class="star"
+                                                                                                      style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                                                      d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <div class="star-container"
+                                                                                             style="position: relative; display: inline-block; vertical-align: middle; padding-left: 0px; padding-right: 0px;">
+                                                                                            <svg viewBox="0 0 51 48"
+                                                                                                 class="widget-svg"
+                                                                                                 style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                                                <path class="star"
+                                                                                                      style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                                                      d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <div class="star-container"
+                                                                                             style="position: relative; display: inline-block; vertical-align: middle; padding-left: 0px; padding-right: 0px;">
+                                                                                            <svg viewBox="0 0 51 48"
+                                                                                                 class="widget-svg"
+                                                                                                 style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                                                <path class="star"
+                                                                                                      style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                                                      d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <div class="star-container"
+                                                                                             style="position: relative; display: inline-block; vertical-align: middle; padding-left: 0px;">
+                                                                                            <svg viewBox="0 0 51 48"
+                                                                                                 class="widget-svg"
+                                                                                                 style="width: 17px; height: 17px; transition: transform 0.2s ease-in-out 0s;">
+                                                                                                <path class="star"
+                                                                                                      style="fill: yellow; transition: fill 0.2s ease-in-out 0s;"
+                                                                                                      d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p class="recommended"><i
+                                                                                    class="far fa-thumbs-up"></i>Tavsiya
+                                                                                qilingan ustoz</p>
+                                                                            <p class="comment-content">Juda yaxshi dars
+                                                                                oʻtadi. Men online dars tushunarli
+                                                                                boʻlishiga ishonmagan edim va endi
+                                                                                boshqalarga ham tavsiya qilaman</p>
+                                                                            <div class="comment-reply"><span
+                                                                                    class="comment-btn cursor_pointer"><i
+                                                                                    class="fas fa-reply me-2"></i>Javob yozish</span>
+                                                                                <p class="recommend-btn"><span>Tavsiya qilasizmi?</span><a
+                                                                                        href="#" class="like-btn"><i
+                                                                                        class="far fa-thumbs-up"></i> Ha</a><a
+                                                                                        href="#" class="dislike-btn"><i
+                                                                                        class="far fa-thumbs-down"></i>
+                                                                                    Yo'q</a></p></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container-fluid">
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-about">
+                                <div class="footer-logo"><img src="/9913222135055ee1a4b3085f999b783a.png" alt="logo">
+                                </div>
+                                <div class="footer-about-content">
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li><a href="https://t.me/MyTeacheruzb" target="_blank"><i
+                                                    class="fab fa-telegram-plane"></i></a></li>
+                                            <li><a href="https://www.instagram.com/myteacher.uz/" target="_blank"><i
+                                                    class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.facebook.com/uzmyteacher/" target="_blank"><i
+                                                    aria-hidden="true" class="fab fa-facebook-f"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-menu"><h2 class="footer-title">Menyu</h2>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">Asosiy</a></li>
+                                    <li><a href="/about/">Biz haqimizda</a></li>
+                                    <li><a href="/blog/blog-grid/">Blog</a></li>
+                                    <li><a href="/mentor/booking/3498">Fikrlar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-menu"><h2 class="footer-title">Eng so'nggi yangiliklar</h2>
+                                <ul>
+                                    <li><a href="/">Bizga investitsiya kiriting…...</a></li>
+                                    <li>
+                                        <a href="https://daryo.uz/2021/02/12/audio-kursmi-yoki-onlayn-dars-qay-biri-samaraliroq/">Daryo.uz
+                                            maqolasi: Audio kursm...</a></li>
+                                    <li><a href="https://xabar.uz/tahlil/ikki-yosh-filolog-yaxshi-daromad">Xabar.uz
+                                        maqolasi: Ikki yosh f...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-contact"><h2 class="footer-title">Aloqa</h2>
+                                <div class="footer-contact-info">
+                                    <div class="footer-address"><span><i class="fas fa-map-marker-alt"></i></span>
+                                        <p>Toshkent shahri, Yunusobod tumani, <br>9-mavze 8-uy 27-xonadon</p></div>
+                                    <p><a href="tel:+998973003011" class="text-black"><i class="fas fa-phone-alt"></i>+998973003011</a>
+                                    </p>
+                                    <p class="mb-0"><a href="mailto:info@myteacher.uz" class="text-black"><i
+                                            class="fas fa-envelope"></i>info@myteacher.uz</a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container-fluid">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="copyright-text"><p class="mb-0">© 2022 MyTeacher</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+</html>
